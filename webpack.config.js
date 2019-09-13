@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -12,5 +14,21 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin()
-    ]
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                },
+            },
+            {
+                test: /\.sass$/,
+                use: ['style-loader', 'sass-loader']
+            }
+        ]
+    },
+    plugins: []
 };

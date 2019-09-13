@@ -1,0 +1,24 @@
+{
+  "name": "webpack-config",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infreezer/webpack-config.git"
+  },
+  "keywords": [],
+  "author": "infreezer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infreezer/webpack-config/issues"
+  },
+  "homepage": "https://github.com/infreezer/webpack-config#readme",
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  }
+}

@@ -10,7 +10,7 @@ module.exports = merge(common, {
     devtool: 'source-map',
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'main.min.css'
+            filename: '[name].min.css'
         }),
         new Critters({
             preload: 'swap'

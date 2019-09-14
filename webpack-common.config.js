@@ -4,9 +4,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: { 
+        global: './src/scripts/global.js',
+        index: './src/scripts/index.js',
+        about: './src/scripts/about.js',
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].min.js',
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
@@ -19,7 +23,13 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'src/pages/index.html',
+            chunks: ['global', 'index']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: 'src/pages/about.html',
+            chunks: ['global', 'about']
         }),
         new CopyPlugin([
             {
@@ -43,7 +53,7 @@ module.exports = {
                     loader: 'html-loader',
                     options: {
                         interpolate: true
-                      }                  
+                    }                  
                 }
             },
             {

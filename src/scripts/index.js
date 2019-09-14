@@ -1,9 +1,8 @@
 import $ from 'jquery';
 
-import './styles/global/global.less';
-import './styles/styles.less';
+import '../styles/index.less';
 
-import './images/floki-bb8.jpg';
+import '../images/floki-bb8.jpg';
 
 let promise = new Promise(function (resolve, reject) {
     setTimeout(() => resolve("done"), 1000);

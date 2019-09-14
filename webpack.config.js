@@ -3,9 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'production',
+    devtool: 'source-map',
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
@@ -13,7 +15,12 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: 'src/index.html'
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
+          }),
     ],
     module: {
         rules: [
@@ -25,10 +32,29 @@ module.exports = {
                 },
             },
             {
-                test: /\.sass$/,
-                use: ['style-loader', 'sass-loader']
+                test: /\.(le|c)ss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+
+                    {
+                        loader: "less-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             }
         ]
-    },
-    plugins: []
+    }
 };

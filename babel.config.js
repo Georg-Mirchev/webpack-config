@@ -1,4 +1,4 @@
-{
+module.exports = {
     "presets": [
         [
             "@babel/preset-env", 
@@ -8,8 +8,8 @@
                     "version": 3, 
                     "proposals": true 
                 },
-                "debug": true
+                "debug": process.env.NODE_ENV === "production"
             }
         ]
     ]
-}
+};

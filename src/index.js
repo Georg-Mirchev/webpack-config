@@ -1,5 +1,5 @@
 import './styles.less';
-require("html-loader!./partial/nav.html");
+import $ from 'jquery';
 
 let promise = new Promise(function (resolve, reject) {
     setTimeout(() => resolve("done"), 1000);
@@ -8,3 +8,7 @@ let promise = new Promise(function (resolve, reject) {
 promise.then(
     result => console.log(result),
 );
+
+$(() => {
+    console.log('doc ready');
+})

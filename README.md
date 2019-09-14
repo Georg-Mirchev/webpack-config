@@ -2,7 +2,7 @@
 
 ### Requirements:
 
-- [ ] Setup webpack-dev-server and npm build scripts
+- [x] Setup webpack-dev-server and npm build scripts
 - [x] Add index.html and generated Javascript bundle
 - [ ] Add webpack alias to make it easier to import files
 - [x] Transform ES6+ to ES5
@@ -12,7 +12,7 @@
 - [ ] Inline SVG elements
 - [ ] Apply CSS vendor prefixes
 - [ ] Optimize CSS and Javascript assets
-- [ ] Separate dev and prod environments
+- [x] Separate dev and prod environments
 
 
 ### Loaders used:

@@ -11,4 +11,4 @@ promise.then(
 
 $(() => {
     console.log('doc ready');
-})
+});

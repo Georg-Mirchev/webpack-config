@@ -34,29 +34,6 @@ module.exports = {
                 },
             },
             {
-                test: /\.(le|c)ss$/,
-                use: [{
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-                    {
-                        loader: "css-loader",
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-
-                    {
-                        loader: "less-loader",
-                        options: {
-                            sourceMap: true
-                        }
-                    }
-                ]
-            },
-            {
                 test: /\.(html)$/,
                 use: {
                     loader: 'html-loader',

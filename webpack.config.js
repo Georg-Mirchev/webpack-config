@@ -1,8 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {
-    CleanWebpackPlugin
-} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -20,7 +18,7 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
-          }),
+        }),
     ],
     module: {
         rules: [
@@ -33,8 +31,7 @@ module.exports = {
             },
             {
                 test: /\.(le|c)ss$/,
-                use: [
-                    {
+                use: [{
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             sourceMap: true
@@ -54,6 +51,15 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        interpolate: true
+                      }                  
+                }
             }
         ]
     }

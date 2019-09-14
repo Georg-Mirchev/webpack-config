@@ -17,10 +17,10 @@ module.exports = merge(common, {
         new MiniCssExtractPlugin({
             filename: '[name].min.css'
         }),
-        new Critters({
-            preload: 'swap',
-            pruneSource: false
-        })
+        // new Critters({
+        //     preload: 'swap',
+        //     pruneSource: false
+        // })
     ],
     module: {
         rules: [
@@ -60,16 +60,16 @@ module.exports = merge(common, {
         }, ]
     },
     optimization: {
-        // runtimeChunk: 'single',
-        // moduleIds: 'hashed',
-        // splitChunks: {
-        //     cacheGroups: {
-        //         vendors: {
-        //             test: /[\\/]node_modules[\\/]/,
-        //             chunks: 'all'
-        //         }
-        //     }
-        // },
+        runtimeChunk: 'single',
+        moduleIds: 'hashed',
+        splitChunks: {
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: 'all'
+                }
+            }
+        },
         minimize: true,
         minimizer: [new TerserPlugin({
             cache: true,

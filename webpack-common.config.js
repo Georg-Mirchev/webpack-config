@@ -12,6 +12,7 @@ module.exports = {
     resolve: {
         extensions: ['.js'],
         alias: {
+            // styles: path.resolve(__dirname, 'src/styles/'),
             jquery: 'jquery/src/jquery'
         }
     },
@@ -41,6 +42,21 @@ module.exports = {
                         interpolate: true
                       }                  
                 }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        context: path.resolve(__dirname, "src/"),
+                        outputPath: 'images',
+                        publicPath: '../images',
+                        useRelativePaths: true,
+                    },
+                  },
+                ],
             }
         ]
     }

@@ -6,9 +6,9 @@
 - [x] Add index.html and generated Javascript bundle
 - [ ] Add webpack alias to make it easier to import files
 - [x] Transform ES6+ to ES5
-- [ ] Import and inject CSS code
-- [ ] Extracting all CSS into a single file
-- [ ] Handle files
+- [x] Import and inject CSS code
+- [x] Extracting all CSS into a single file
+- [x] Handle files
 - [ ] Inline SVG elements
 - [ ] Apply CSS vendor prefixes
 - [ ] Optimize CSS and Javascript assets
@@ -21,9 +21,13 @@
 * css-loader
 * less-loader
 * html-loader
+* file-loader
 
 
 ### Plugins used:
 
 * clean-webpack-plugin
 * html-webpack-plugin
+* copy-webpack-plugin
+* mini-css-extract-plugin
+* critters

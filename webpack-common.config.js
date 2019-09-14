@@ -4,12 +4,16 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    mode: 'production',
-    devtool: 'source-map',
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    resolve: {
+        extensions: ['.js'],
+        alias: {
+            jquery: 'jquery/src/jquery'
+        }
     },
     plugins: [
         new CleanWebpackPlugin(),

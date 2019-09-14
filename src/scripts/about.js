@@ -1,3 +1,3 @@
-import '../styles/about.less';
+import 'styles/about.less';
 
 console.log('Hi from the about.');

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import '../styles/index.less';
+import 'styles/index.less';
 
 import '../images/floki-bb8.jpg';
 

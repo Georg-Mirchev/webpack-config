@@ -2,16 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: { 
         global: './src/scripts/global.js',
         index: './src/scripts/index.js',
         about: './src/scripts/about.js',
-    },
-    output: {
-        filename: '[name].min.js',
-        path: path.resolve(__dirname, 'dist')
     },
     resolve: {
         extensions: ['.js'],
@@ -21,6 +18,7 @@ module.exports = {
         }
     },
     plugins: [
+        // new BundleAnalyzerPlugin(),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: 'src/pages/index.html',

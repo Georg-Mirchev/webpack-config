@@ -10,8 +10,8 @@
 - [x] Extracting all CSS into a single file
 - [x] Handle files
 - [ ] Inline SVG elements
-- [ ] Apply CSS vendor prefixes
-- [ ] Optimize CSS and Javascript assets
+- [x] Apply CSS vendor prefixes
+- [x] Optimize CSS and Javascript assets
 - [x] Separate dev and prod environments
 
 
@@ -31,3 +31,4 @@
 * copy-webpack-plugin
 * mini-css-extract-plugin
 * critters
+* terser

@@ -1,6 +1,7 @@
 {
   "name": "webpack-config",
   "version": "1.0.0",
+  "sideEffects": true,
   "description": "",
   "private": true,
   "scripts": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/infreezer/webpack-config#readme",
   "devDependencies": {
     "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
@@ -38,13 +40,17 @@
     "mini-css-extract-plugin": "^0.8.0",
     "postcss-loader": "^3.0.0",
     "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.0.1",
     "webpack": "^4.40.2",
+    "webpack-bundle-analyzer": "^3.5.0",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@babel/runtime": "^7.6.0",
     "core-js": "^3.2.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "whatwg-fetch": "^3.0.0"
   }
 }

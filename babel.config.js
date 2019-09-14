@@ -1,5 +1,8 @@
-module.exports = {
-    "presets": [
+module.exports = (api) => {
+    api.cache(true);
+    const plugins = ["@babel/plugin-transform-runtime"];
+
+    const presets = [
         [
             "@babel/preset-env", 
             {
@@ -12,4 +15,9 @@ module.exports = {
             }
         ]
     ]
+
+    return {
+        presets,
+        plugins
+    }
 };

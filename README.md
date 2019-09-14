@@ -4,7 +4,7 @@
 
 - [x] Setup webpack-dev-server and npm build scripts
 - [x] Add index.html and generated Javascript bundle
-- [ ] Add webpack alias to make it easier to import files
+- [x] Add webpack alias to make it easier to import files
 - [x] Transform ES6+ to ES5
 - [x] Import and inject CSS code
 - [x] Extracting all CSS into a single file

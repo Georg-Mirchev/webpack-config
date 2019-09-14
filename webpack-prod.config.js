@@ -18,7 +18,8 @@ module.exports = merge(common, {
             filename: '[name].min.css'
         }),
         new Critters({
-            preload: 'swap'
+            preload: 'swap',
+            pruneSource: false
         })
     ],
     module: {

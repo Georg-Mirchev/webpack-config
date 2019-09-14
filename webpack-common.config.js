@@ -31,7 +31,7 @@ module.exports = {
         }),
         new CopyPlugin([
             {
-                from: path.resolve(__dirname, 'src', 'data', 'people.json'),
+                from: path.resolve(__dirname, 'src', 'data', 'todos.json'),
                 to: path.resolve(__dirname, 'dist', 'data')
             }
         ]),
@@ -68,6 +68,10 @@ module.exports = {
                     },
                   },
                 ],
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             }
         ]
     }

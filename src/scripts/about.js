@@ -1,4 +1,6 @@
 import 'styles/about.less';
-import { add } from './calc';
+import { catToHumanYears } from './calc';
 
-console.log(`Hi from the about page. My name is John and I\'m ${add(17, 20)} years old`);
+const catYears = 3;
+
+console.log(`I'm ${catToHumanYears(catYears)} human years old. Which is ${catYears} cat years.`);

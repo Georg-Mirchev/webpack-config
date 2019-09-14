@@ -7,8 +7,12 @@
 </head>
 <body>
     ${ require('./partial/nav.html') }
-    <div>box <span>bold</span></div>
-    <div class="cat"></div>
-    <input type="text" placeholder="test color">
+    <main>
+        <div class="todo-label">// TODO</div>
+        <input id="task-input" type="text" placeholder="New Task">
+        <div class="add-task-button">Add</div>
+        <div class="spinner">LOADING SPINNER SVG</div>
+        <ul class="todos"></ul>
+    </main>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+    "todos": [
+        {
+            "title": "Go to the shop",
+            "isDone": false
+        },
+        {
+            "title": "Eat, Sleep, Train, Repeat",
+            "isDone": false
+        },
+        {
+            "title": "Finish webpack project",
+            "isDone": false
+        }
+    ]
+}

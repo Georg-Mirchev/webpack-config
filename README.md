@@ -9,7 +9,7 @@
 - [x] Import and inject CSS code
 - [x] Extracting all CSS into a single file
 - [x] Handle files
-- [ ] Inline SVG elements
+- [x] Inline SVG elements
 - [x] Apply CSS vendor prefixes
 - [x] Optimize CSS and Javascript assets
 - [x] Separate dev and prod environments
